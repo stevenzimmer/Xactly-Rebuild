@@ -1,0 +1,23 @@
+{
+  "name": "xactly_rebuild",
+  "description": "Xactly Website Rebuild",
+  "main": "index.js",
+  "authors": [
+    "Steven Zimmer <stevenzimmer40@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.6.3",
+    "animate.css": "^3.5.2"
+  }
+}
