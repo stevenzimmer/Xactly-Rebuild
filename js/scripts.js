@@ -103,6 +103,24 @@ $(document).ready( function() {
 
 	});
 
+	// Modal video start/stop/pause on click and close
+
+    var youtubeFunc ='';
+
+    var outerDiv = document.getElementById("modalVideo");
+
+    var youtubeIframe = outerDiv.getElementsByTagName("iframe")[0].contentWindow;
+
+    $('#modalVideo').on('hidden.bs.modal', function (e) {
+    	youtubeFunc = 'pauseVideo';
+    	youtubeIframe.postMessage('{"event":"command","func":"' + youtubeFunc + '","args":""}', '*');
+    });
+
+    $('#modalVideo').on('shown.bs.modal', function (e) {
+        youtubeFunc = 'playVideo';
+      	youtubeIframe.postMessage('{"event":"command","func":"' + youtubeFunc + '","args":""}', '*');
+    });
+
 
 });
 
